@@ -29,7 +29,7 @@ class _atomTitleState extends State<atomTitle> {
         widget.title,
         textAlign: TextAlign.center,
         style: TextStyle(
-          fontSize: scaledFontSize(23.0),
+          fontSize: scaledFontSize(context, 25.0),
           fontFamily: "NunitoBold",
           fontWeight: FontWeight.bold,
           color:  widget.colorTitle ??Color(0xff0095CD),
@@ -66,7 +66,7 @@ class _atomSubtitleState extends State<atomSubtitle> {
           widget.subtitle,
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontSize: scaledFontSize(20.0),
+            fontSize: scaledFontSize(context,20.0),
             fontFamily: "NunitoBold",
             fontWeight: FontWeight.normal,
             color: widget.colorSubtitle ?? Color(0xff0095CD)
@@ -109,7 +109,7 @@ class _atomTextState extends State<atomText> {
         widget.text,
         textAlign: widget.alignment ?? TextAlign.center,
         style: TextStyle(
-            fontSize: widget.fontSize ?? scaledFontSize(18.0),
+            fontSize: widget.fontSize ?? scaledFontSize(context,18.0),
             fontFamily: widget.fontFamily ?? "NunitoRegular",
             fontWeight: FontWeight.normal,
             color: widget.colorText ??Color(0xff939393)),

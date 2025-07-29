@@ -23,14 +23,14 @@ class _atomYesOrNotState extends State<atomYesOrNot> {
 
     return Column(
       children: [
-        Text(widget.textAtom, style: TextStyle(color: Color(0xff0095CD),fontSize: scaledFontSize(20.0), fontFamily: "NunitoBold"), textAlign: TextAlign.center),
+        Text(widget.textAtom, style: TextStyle(color: Color(0xff0095CD),fontSize: scaledFontSize(context, 20.0), fontFamily: "NunitoBold"), textAlign: TextAlign.center),
         sizedBoxAll.sizedBoxHeight2,
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Row(
               children: [
-                Text("Si", style: TextStyle(color: Color(0xff0095CD), fontSize: scaledFontSize(20.0), fontFamily: "NunitoBold"),),
+                Text("Si", style: TextStyle(color: Color(0xff0095CD), fontSize: scaledFontSize(context, 20.0), fontFamily: "NunitoBold"),),
                 SizedBox(width: 10.0,),
                 GestureDetector(
                 onTap: (){
@@ -85,7 +85,7 @@ class _atomYesOrNotState extends State<atomYesOrNot> {
             ),
             Row(
               children: [
-                Text("No", style: TextStyle(color: Color(0xff0095CD), fontSize: scaledFontSize(20.0), fontFamily: "NunitoBold"),),
+                Text("No", style: TextStyle(color: Color(0xff0095CD), fontSize: scaledFontSize(context, 20.0), fontFamily: "NunitoBold"),),
                 SizedBox(width: 10.0,),
                 GestureDetector(
                 onTap: (){

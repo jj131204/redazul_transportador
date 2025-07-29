@@ -47,7 +47,7 @@ class _PageLoginState extends State<PageLogin> {
                 SizedBox(height: 25.0),
                 Text(
                   'Iniciar sesion en tu cuenta',
-                  style: textAll.subTitle.copyWith(fontSize: scaledFontSize(20)),
+                  style: textAll.subTitle.copyWith(fontSize: scaledFontSize(context,20)),
                 ),
               ],
             ),
@@ -92,12 +92,12 @@ class _PageLoginState extends State<PageLogin> {
                     width: 1.0,
                   ),
                 )),
-                child: Text("¿Olvidaste tu contraseña?",style: TextStyle(color: colores.gray2, fontSize: scaledFontSize(18)), textAlign: TextAlign.center,),
+                child: Text("¿Olvidaste tu contraseña?",style: TextStyle(color: colores.gray2, fontSize: scaledFontSize(context, 18)), textAlign: TextAlign.center,),
               ),
             ),
             SizedBox(height: 15.0),
             atomButtonGrayForm(text: "Iniciar sesión", onPressed: validForm ? (){
-                          
+              context.push('/');
             }: null),
             SizedBox(height: 15.0),
             Row(
@@ -109,14 +109,14 @@ class _PageLoginState extends State<PageLogin> {
                     "¿No tienes cuenta?",
                     style: TextStyle(
                         color: Color(0xff0095CD),
-                        fontSize: scaledFontSize(20.0),
+                        fontSize: scaledFontSize(context,20.0),
                         fontFamily: "NunitoRegular",
                         fontWeight: FontWeight.normal),
                   ),
                 ),
                 GestureDetector(
                   onTap: () {
-                    context.push('/home');
+                    context.push('/pageProfile');
                   },
                   child: Container(
                     decoration: BoxDecoration(
@@ -130,7 +130,7 @@ class _PageLoginState extends State<PageLogin> {
                       "Registrate",
                       style: TextStyle(
                           color: Color(0xff0095CD),
-                          fontSize: scaledFontSize(20.0),
+                          fontSize: scaledFontSize(context, 20.0),
                           fontFamily: "nunitoBold",
                           fontWeight: FontWeight.bold),
                     ),

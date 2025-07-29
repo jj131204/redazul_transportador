@@ -97,7 +97,7 @@ class _atomOptionsSelectedState extends State<atomOptionsSelected> {
           // atomText(text: "Pertenezco a la comunidad LGTBIQ+.", colorText: colores.white, )
           Flexible(
             child: Text(widget.text, style: TextStyle(
-              fontSize: scaledFontSize(18.0),
+              fontSize: scaledFontSize(context,18.0),
               fontFamily: "NunitoRegular",
               fontWeight: FontWeight.normal,
               color: colores.white,)

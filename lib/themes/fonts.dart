@@ -15,41 +15,36 @@ double checkWidthScreen() {
   return window.physicalSize.width / window.devicePixelRatio;
 }
 
-double scaledFontSize(double originalSize) {
-  // Obtén el ancho de la pantalla
-  double screenWidth = window.physicalSize.width / window.devicePixelRatio;
-  double widthPage = checkWidthScreen();
-  double scale;
-  // Define un factor de escala (puedes ajustar esto según tus necesidades)
-  if(widthPage <= 400){
-    scale = screenWidth / 393;  // Por ejemplo, se asume que el diseño se basa en un ancho de pantalla de 360 puntos.
-    // Escala el tamaño de fuente original
-    double scaledSize = originalSize * scale;
 
-    return scaledSize;
+double scaledFontSize(BuildContext context, double originalSize) {
+  double screenWidth = MediaQuery.of(context).size.width;
+
+  if (screenWidth <= 400) {
+    double scale = screenWidth / 393;
+    return originalSize * scale;
   }
-  
+
   return originalSize;
-  
 }
+
 
 class textAll {
   static TextStyle title = TextStyle(
-    fontSize: scaledFontSize(23.0),
+    fontSize: 23.0,
     fontFamily: "NunitoBold",
     fontWeight: FontWeight.bold,
     color: colores.blue2,
   );
 
   static TextStyle subTitle = TextStyle(
-    fontSize: scaledFontSize(23.0),
+    fontSize: 23.0,
     fontFamily: "NunitoBold",
     fontWeight: FontWeight.normal,
     color: colores.gray2
   );
 
   static TextStyle textGray  = TextStyle(
-    fontSize: scaledFontSize(18.0),
+    fontSize: 23.0,
     fontFamily: "NunitoRegular",
     fontWeight: FontWeight.normal,
     color: colores.gray1,

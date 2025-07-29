@@ -19,7 +19,7 @@ class _atomQuestionSelectState extends State<atomQuestionSelect> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(widget.textAtom, style: TextStyle(color: Color(0xff0095CD),fontSize: scaledFontSize(20.0), fontFamily: "NunitoBold"), textAlign: TextAlign.center),
+        Text(widget.textAtom, style: TextStyle(color: Color(0xff0095CD),fontSize: scaledFontSize(context, 20.0), fontFamily: "NunitoBold"), textAlign: TextAlign.center),
         sizedBoxAll.sizedBoxHeight2,
         atomSelect(itemsSelect: widget.selectAtom, nameSelect: "Elige una opción", onChanged: (value){
           widget.functionSelect(value.toString());

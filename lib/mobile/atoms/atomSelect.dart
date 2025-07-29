@@ -87,7 +87,7 @@ class _atomSelectState extends State<atomSelect> {
       child: Container(
           
           width: widget.widthSelect == null ? 400.0 : widget.widthSelect,
-          // height: scaledFontSize(47.0),
+          // height: scaledFontSize(context,47.0),
           constraints: BoxConstraints(
               maxWidth: MediaQuery.of(context).size.width * 0.90),
           decoration: styleInputs.decorationInputs,
@@ -97,8 +97,8 @@ class _atomSelectState extends State<atomSelect> {
             controller: valueSelect,
             cursorColor: colores.blue1,
             textAlign: TextAlign.center,
-            style: someSelected ? TextStyle(fontSize: scaledFontSize(20.0), color: Color(0xff0095CD), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal) : TextStyle(fontSize: scaledFontSize(20.0), color: Color(0xff0095CD).withOpacity(0.4), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal ),
-            // style:  TextStyle(fontSize:  scaledFontSize(20.0), color: Color(0xff0095CD), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal),
+            style: someSelected ? TextStyle(fontSize: scaledFontSize(context,20.0), color: Color(0xff0095CD), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal) : TextStyle(fontSize: scaledFontSize(context,20.0), color: Color(0xff0095CD).withOpacity(0.4), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal ),
+            // style:  TextStyle(fontSize:  scaledFontSize(context,20.0), color: Color(0xff0095CD), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal),
             decoration: InputDecoration(
               contentPadding: EdgeInsets.zero,
               prefixIcon: Padding(
@@ -108,7 +108,7 @@ class _atomSelectState extends State<atomSelect> {
               // hintText: widget.textInput,
               hintStyle: TextStyle(
                   color: Color(0xff0095CD),
-                  fontSize:  scaledFontSize(20.0),
+                  fontSize:  scaledFontSize(context,20.0),
                   fontFamily: "NunitoRegular",
                   fontWeight: FontWeight.normal),
               filled: true,
@@ -128,7 +128,7 @@ class _atomSelectState extends State<atomSelect> {
               ),
               suffixIcon: Icon(Icons.arrow_drop_down_rounded, color: Color(0xff0095CD),size: 28.0,),
               labelText: valueSelect.text != widget.nameSelect ? widget.nameSelect :  widget.requiredSelect == null || widget.requiredSelect == true ? "Este campo es obligatorio" : "",
-              labelStyle:  TextStyle(color: colores.gray4, fontSize:scaledFontSize(20.0), backgroundColor: colores.white,),
+              labelStyle:  TextStyle(color: colores.gray4, fontSize:scaledFontSize(context,20.0), backgroundColor: colores.white,),
               floatingLabelAlignment: FloatingLabelAlignment.center,
               floatingLabelBehavior: FloatingLabelBehavior.always,
             ),
@@ -144,7 +144,7 @@ class _atomSelectState extends State<atomSelect> {
       builder: (BuildContext context) {
         return AlertDialog(
           backgroundColor: colores.white,
-          title: Text(widget.nameSelect, style: TextStyle(fontSize: scaledFontSize(20.0), fontFamily: "NunitoBold", fontWeight: FontWeight.normal, color: colores.blue5), textAlign: TextAlign.center,),
+          title: Text(widget.nameSelect, style: TextStyle(fontSize: scaledFontSize(context,20.0), fontFamily: "NunitoBold", fontWeight: FontWeight.normal, color: colores.blue5), textAlign: TextAlign.center,),
           content:SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -155,16 +155,16 @@ class _atomSelectState extends State<atomSelect> {
                       title: widget.existImage == null || widget.existImage == false ? Column(
                         children: [
                           widget.existSpecie != null && widget.existSpecie != false ? Text(document.specie, style: TextStyle(
-                            fontSize: scaledFontSize(18.0),
+                            fontSize: scaledFontSize(context,18.0),
                             fontFamily: "NunitoBold",
                             fontWeight: FontWeight.bold,
                             color: colores.blue6,
                           ), textAlign: TextAlign.center,) : Container(height: 0.0,),
                           // Text(document.label, style: 
-                          Text(document.label, style: TextStyle(fontSize: scaledFontSize(18.0), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal, color: colores.blue1), textAlign: TextAlign.center,),
+                          Text(document.label, style: TextStyle(fontSize: scaledFontSize(context,18.0), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal, color: colores.blue1), textAlign: TextAlign.center,),
                           widget.existDate != null && widget.existDate != false ?  Text(document.date, style: TextStyle(
 
-                            fontSize: scaledFontSize(16.0),
+                            fontSize: scaledFontSize(context,16.0),
                             fontFamily: "NunitoRegular",
                             fontWeight: FontWeight.normal,
                             color: colores.blue5
@@ -180,7 +180,7 @@ class _atomSelectState extends State<atomSelect> {
                             ),
                           ),
                           SizedBox(width: 10.0),
-                          Expanded(child: Text(document.label, style: TextStyle(fontSize: scaledFontSize(18.0), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal, color: colores.blue1), textAlign: TextAlign.center,)),
+                          Expanded(child: Text(document.label, style: TextStyle(fontSize: scaledFontSize(context,18.0), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal, color: colores.blue1), textAlign: TextAlign.center,)),
                         ],
                       ),
                       onTap: () {

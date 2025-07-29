@@ -90,7 +90,7 @@ class _atomLogoMiPescao1State extends State<atomLogoMiPescao1> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        atomText(text: 'Desarrollado por:', fontSize: scaledFontSize(16.0),),
+        atomText(text: 'Desarrollado por:', fontSize: scaledFontSize(context, 16.0),),
         sizedBoxAll.sizedBoxHeight3,
         Image.asset(
           'assets/images/logo-RedAzul.png',

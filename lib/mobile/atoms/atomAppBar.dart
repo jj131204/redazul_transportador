@@ -4,17 +4,8 @@ import 'package:go_router/go_router.dart';
 import '../../themes/colors.dart';
 import 'atomLogo.dart';
 
-class atomAppBar extends StatefulWidget {
-  const atomAppBar({super.key});
-
-  @override
-  State<atomAppBar> createState() => _atomAppBarState();
-}
-
-class _atomAppBarState extends State<atomAppBar> {
-  @override
-  Widget build(BuildContext context) {
-    return AppBar(
+AppBar atomAppBar(BuildContext context){
+  return AppBar(
       automaticallyImplyLeading: false, 
       flexibleSpace: Container(
         decoration: BoxDecoration(
@@ -59,7 +50,7 @@ class _atomAppBarState extends State<atomAppBar> {
 
                 GestureDetector(
                   onTap: (){
-                    context.push('/home');
+                    context.push('/');
                   },
                   child: Container(
                     child: atomLogoHeader(
@@ -75,10 +66,7 @@ class _atomAppBarState extends State<atomAppBar> {
                     //       builder: (context) => allNotifications()),
                     // );
                   },
-                  child: Image.asset(
-                    'assets/images/icoAppPescadores.png',
-                    height: 20.0,
-                  ),
+                  child: Icon(Icons.notifications_rounded, color: colores.blue3, size: 32,),
                 ),
               ]
             ),
@@ -86,5 +74,4 @@ class _atomAppBarState extends State<atomAppBar> {
         ),
       )
     );
-  }
 }

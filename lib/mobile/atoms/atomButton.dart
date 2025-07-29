@@ -65,7 +65,7 @@ class _atomButtonGrayFormState extends State<atomButtonGrayForm> {
         } : widget.onPressed,
         child: Text(
           widget.text,
-          style: TextStyle(fontFamily: "NunitoBold", fontSize: scaledFontSize(25.0), color: widget.colorLetter == null ? colores.white: widget.colorLetter),
+          style: TextStyle(fontFamily: "NunitoBold", fontSize: scaledFontSize(context, 25.0), color: widget.colorLetter == null ? colores.white: widget.colorLetter),
         ),
       ),
     );

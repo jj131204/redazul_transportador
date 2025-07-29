@@ -99,7 +99,7 @@ class _atomInputDateState extends State<atomInputDate> {
         child: Stack(
           children: [
             Container(
-              height: scaledFontSize(47.0),
+              height: scaledFontSize(context, 47.0),
               width: 400.0,
               padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 10.0, right: 10.0),
               constraints: BoxConstraints(
@@ -112,9 +112,9 @@ class _atomInputDateState extends State<atomInputDate> {
                 children: [
                   // Icono para centrar
                   dateSelected ?
-                  Text('${selectedDate.day} - ${months[selectedDate.month - 1]} - ${selectedDate.year}', style: TextStyle(fontSize: scaledFontSize(20.0), color: Color(0xff0095CD), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal),) : 
-                  widget.completed != null && widget.completed == true ? Text('${widget.nameInput}', style: TextStyle(fontSize: scaledFontSize(20.0), color: Color(0xff0095CD), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal)):
-                  Text('${widget.nameInput}', style: TextStyle(fontSize: scaledFontSize(20.0), color: Color(0xff0095CD).withOpacity(0.4), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal))  
+                  Text('${selectedDate.day} - ${months[selectedDate.month - 1]} - ${selectedDate.year}', style: TextStyle(fontSize: scaledFontSize(context, 20.0), color: Color(0xff0095CD), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal),) : 
+                  widget.completed != null && widget.completed == true ? Text('${widget.nameInput}', style: TextStyle(fontSize: scaledFontSize(context, 20.0), color: Color(0xff0095CD), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal)):
+                  Text('${widget.nameInput}', style: TextStyle(fontSize: scaledFontSize(context, 20.0), color: Color(0xff0095CD).withOpacity(0.4), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal))  
                 ],
               ),
             ),
@@ -134,7 +134,7 @@ class _atomInputDateState extends State<atomInputDate> {
                       // width: ,
                       child: Text(
                         'Este campo es obligatorio',
-                        style: TextStyle(color: colores.gray4, fontSize:scaledFontSize(15.0), backgroundColor: colores.white,),
+                        style: TextStyle(color: colores.gray4, fontSize:scaledFontSize(context, 15.0), backgroundColor: colores.white,),
                         textAlign: TextAlign.center,
                       ),
                     ),

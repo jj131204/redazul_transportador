@@ -66,7 +66,7 @@ class _atomCardborderRoundedState extends State<atomCardborderRounded> {
                       fit: BoxFit.scaleDown,
                       child: Text(
                         widget.textInput,
-                        style: TextStyle(color: colores.white, fontSize: scaledFontSize(25.0), fontFamily: 'NunitoBold', fontWeight: FontWeight.bold),
+                        style: TextStyle(color: colores.white, fontSize: scaledFontSize(context, 25.0), fontFamily: 'NunitoBold', fontWeight: FontWeight.bold),
                         textAlign: TextAlign.center,
                       ),
                     ),

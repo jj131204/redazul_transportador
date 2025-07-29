@@ -88,7 +88,7 @@ class _atomInputsFormState extends State<atomInputsForm> {
                 onSaved: widget.onSaved,
                 maxLength: widget.maxLengthInput ?? null,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: scaledFontSize(20.0), color: Color(0xff0095CD), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal),
+                style: TextStyle(fontSize: scaledFontSize(context, 20.0), color: Color(0xff0095CD), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal),
                 cursorColor: colores.blue1,
                 decoration: InputDecoration(
                   counterText: '',
@@ -100,7 +100,7 @@ class _atomInputsFormState extends State<atomInputsForm> {
                   hintText: widget.textInput,
                   hintStyle: TextStyle(
                       color: _verifyRequiered,
-                      fontSize: scaledFontSize(20.0),
+                      fontSize: scaledFontSize(context, 20.0),
                       fontFamily: "NunitoRegular",
                       fontWeight: FontWeight.normal),
                   filled: true,
@@ -124,7 +124,7 @@ class _atomInputsFormState extends State<atomInputsForm> {
                   ),
                   errorText: null,
                   labelText:  widget.errorText ?? (widget.controllerInput != null && widget.controllerInput?.text != "" ?  widget.textInput :  widget.textRequired ?? 'Este campo es obligatorio'),
-                  labelStyle: widget.errorText != null ?  TextStyle(color: colores.orange, fontSize:scaledFontSize(18.0), backgroundColor: colores.white,) : TextStyle(color: colores.gray4, fontSize:scaledFontSize(18.0), backgroundColor: colores.white,),
+                  labelStyle: widget.errorText != null ?  TextStyle(color: colores.orange, fontSize:scaledFontSize(context, 18.0), backgroundColor: colores.white,) : TextStyle(color: colores.gray4, fontSize:scaledFontSize(context, 18.0), backgroundColor: colores.white,),
                   floatingLabelAlignment: FloatingLabelAlignment.center,
                   floatingLabelBehavior: FloatingLabelBehavior.always,
 
@@ -199,7 +199,7 @@ class _atomInputCompleteState extends State<atomInputComplete> {
       child: Container(
         padding: EdgeInsets.only(left: 5.0, right: 5.0),
         width: widget.widthInput ?? 400.0,
-        // height: scaledFontSize(47.0),
+        // height: scaledFontSize(context, 47.0),
         constraints: BoxConstraints(
           maxWidth: MediaQuery.of(context).size.width * 0.90,),
         decoration: BoxDecoration(
@@ -228,7 +228,7 @@ class _atomInputCompleteState extends State<atomInputComplete> {
             hintText: widget.valueInput,
             hintStyle: TextStyle(
                 color: colores.gray2,
-                fontSize:  scaledFontSize(20.0),
+                fontSize:  scaledFontSize(context, 20.0),
                 fontFamily: "NunitoRegular",
                 fontWeight: FontWeight.normal),
             filled: true,
@@ -239,7 +239,7 @@ class _atomInputCompleteState extends State<atomInputComplete> {
             ),
           
             labelText: widget.textInput,
-            labelStyle: TextStyle(color: colores.blue1, fontSize:scaledFontSize(18.0), backgroundColor: colores.white, fontFamily: 'nunitoBold', fontWeight: FontWeight.bold),
+            labelStyle: TextStyle(color: colores.blue1, fontSize:scaledFontSize(context, 18.0), backgroundColor: colores.white, fontFamily: 'nunitoBold', fontWeight: FontWeight.bold),
             floatingLabelAlignment: FloatingLabelAlignment.center,
             floatingLabelBehavior: FloatingLabelBehavior.always,
           ),
@@ -294,7 +294,7 @@ class _atomInputFormPasswordState extends State<atomInputFormPassword> {
 
     return Container(
       width: 400.0,
-      // height: scaledFontSize(47.0),
+      // height: scaledFontSize(context, 47.0),
       constraints:
           BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.90),
       decoration: styleInputs.decorationInputs.copyWith(border: widget.errorText != null ? Border.all(color: Colors.orange, width: 2.0,) : null,),
@@ -305,7 +305,7 @@ class _atomInputFormPasswordState extends State<atomInputFormPassword> {
         textAlign: TextAlign.center,
         cursorColor: colores.blue1,
         obscureText: statePassword,
-        style: TextStyle(fontSize:  scaledFontSize(20.0), color: Color(0xff0095CD), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal),
+        style: TextStyle(fontSize:  scaledFontSize(context, 20.0), color: Color(0xff0095CD), fontFamily: "NunitoRegular", fontWeight: FontWeight.normal),
         decoration: InputDecoration(
           contentPadding: EdgeInsets.zero,
           prefixIcon: Padding(
@@ -315,7 +315,7 @@ class _atomInputFormPasswordState extends State<atomInputFormPassword> {
           hintText: widget.textInput,
           hintStyle: TextStyle(
               color: Color(0xff0095CD).withOpacity(0.5),
-              fontSize:  scaledFontSize(20.0),
+              fontSize:  scaledFontSize(context, 20.0),
               fontFamily: "NunitoRegular",
               fontWeight: FontWeight.normal),
           filled: true,
@@ -336,7 +336,7 @@ class _atomInputFormPasswordState extends State<atomInputFormPassword> {
           ),
           errorMaxLines: 1,
           labelText:  errorExist ? widget.errorText  : 'Este campo es obligatorio',
-          labelStyle: errorExist ?  TextStyle(color: colores.orange, fontSize:scaledFontSize(18.0), backgroundColor: colores.white,) : TextStyle(color: colores.gray4, fontSize:scaledFontSize(18.0), backgroundColor: colores.white,),
+          labelStyle: errorExist ?  TextStyle(color: colores.orange, fontSize:scaledFontSize(context, 18.0), backgroundColor: colores.white,) : TextStyle(color: colores.gray4, fontSize:scaledFontSize(context, 18.0), backgroundColor: colores.white,),
           floatingLabelAlignment: FloatingLabelAlignment.center,
           floatingLabelBehavior: FloatingLabelBehavior.always,
           suffixIcon: GestureDetector(

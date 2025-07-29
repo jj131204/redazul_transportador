@@ -327,7 +327,7 @@ Widget build(BuildContext context) {
                                             button.texto,
                                             style: TextStyle(
                                               color: Colors.white,
-                                              fontSize: scaledFontSize(19),
+                                              fontSize: scaledFontSize(context, 19),
                                               fontFamily: "NunitoRegular",
                                             ),
                                           ),

@@ -15,7 +15,7 @@ class _AtomdevelopedbyState extends State<Atomdevelopedby> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        atomText(text: 'Desarrollado por:', fontSize: scaledFontSize(14.0),),
+        atomText(text: 'Desarrollado por:', fontSize: scaledFontSize(context, 14.0),),
         SizedBox(height: 10.0,),
         atomLogoHeader(heightImg: 40.0,),
         SizedBox(height: 5.0,),

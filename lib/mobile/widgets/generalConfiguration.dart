@@ -3,7 +3,8 @@ import 'package:redazul_transportador/themes/colors.dart';
 
 class GeneralConfiguration extends StatefulWidget {
   final Widget content;
-  const GeneralConfiguration({super.key, required this.content});
+  final PreferredSizeWidget? appBarContent;
+  const GeneralConfiguration({super.key, this.appBarContent, required this.content});
 
   @override
   State<GeneralConfiguration> createState() => _GeneralConfigurationState();
@@ -26,6 +27,7 @@ class _GeneralConfigurationState extends State<GeneralConfiguration> {
       child: Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: colores.backgroundGray,
+        appBar: widget.appBarContent,
         body: SafeArea(
           child: SingleChildScrollView(
             child: Center(
@@ -34,8 +36,8 @@ class _GeneralConfigurationState extends State<GeneralConfiguration> {
                 padding: const EdgeInsets.all(20.0),
                 width: double.infinity,
                 constraints: BoxConstraints(
-                  maxWidth: 400.0,
-                  minHeight: availableHeight,
+                  maxWidth: 480.0,
+                  minHeight: widget.appBarContent != null ? availableHeight - 60 :  availableHeight ,
                 ),
                 child: widget.content,
               )

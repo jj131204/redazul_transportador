@@ -148,15 +148,15 @@ class _atomCardRowBorderDoubleState extends State<atomCardRowBorderDouble> {
                       children: [
                         Text(
                           widget.textInput1,
-                          style: widget.colorLetter1 == null ? TextStyle(color: colores.gray2, fontSize: scaledFontSize(20.0), fontFamily: 'NunitoBold',): 
-                          TextStyle(color: widget.colorLetter1, fontSize: double1 == null ? scaledFontSize(20.0) : scaledFontSize(double1), fontFamily: 'NunitoBold'),
+                          style: widget.colorLetter1 == null ? TextStyle(color: colores.gray2, fontSize: scaledFontSize(context, 20.0), fontFamily: 'NunitoBold',): 
+                          TextStyle(color: widget.colorLetter1, fontSize: double1 == null ? scaledFontSize(context, 20.0) : scaledFontSize(context, double1), fontFamily: 'NunitoBold'),
                           textAlign: TextAlign.center,
                         ),
                         SizedBox(height: 10.0,),
                         Text(
                           widget.textInput2,
-                          style: widget.colorLetter2 == null ? TextStyle(color: colores.gray2, fontSize: scaledFontSize(20.0), fontFamily: 'NunitoRegular'): 
-                          TextStyle(color: widget.colorLetter2, fontSize: double2 == null ? scaledFontSize(20.0) : scaledFontSize(double2), fontFamily: 'NunitoRegular'),
+                          style: widget.colorLetter2 == null ? TextStyle(color: colores.gray2, fontSize: scaledFontSize(context, 20.0), fontFamily: 'NunitoRegular'): 
+                          TextStyle(color: widget.colorLetter2, fontSize: double2 == null ? scaledFontSize(context, 20.0) : scaledFontSize(context, double2), fontFamily: 'NunitoRegular'),
                           textAlign: TextAlign.center,
                         ),
                       ],
@@ -253,7 +253,7 @@ class _atomCardRowState extends State<atomCardRow> {
         ),
         padding: EdgeInsets.only(top: 0.10 * 210, bottom: 0.10 * 210, left: 0.08 * 210, right: 0.08 * 210),
         width: widget.widthCard != null ? 400.0 : widget.widthCard,
-        // height: 110.0,
+        height: 110.0,
         constraints: BoxConstraints(
           maxWidth: MediaQuery.of(context).size.width * 0.90,
         ),
@@ -273,11 +273,12 @@ class _atomCardRowState extends State<atomCardRow> {
                     fit: BoxFit.contain,
                   ),
                 ),
+                SizedBox(width: 10.0),
                 Expanded(
                   child: Center(
                     child: Text(
                       widget.textInput,
-                      style: TextStyle(color: widget.colorLetter1 ?? colores.white, fontSize: widget.fontSize ?? scaledFontSize(19.0), fontFamily: 'NunitoBold'),
+                      style: TextStyle(color: widget.colorLetter1 ?? colores.white, fontSize: widget.fontSize ?? scaledFontSize(context, 19.0), fontFamily: 'NunitoBold'),
                       textAlign: TextAlign.center,
                     ),
                   ),
